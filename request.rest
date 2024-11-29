@@ -1,0 +1,4 @@
+GET http://localhost:8000/warga/get
+
+###
+GET http://localhost:8000/warga/getStatistic
