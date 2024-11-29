@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: #7F884F;
+    --secondary-color: #9EA965;
+    --third-color: #B2B98F;
+    --fourth-color: #D7DAC6;
+    --fifth-color: #282B17;
+    --sixth-color: #717A41;
+    --text-color: #6D6D6D;
+    --background-color: #F6F6F6;
+}
+
+.nav {
+    width: 100%;
+    background-color: var(--primary-color);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .25rem 2rem;
+}
+
+.nav__logo img {
+    margin-top: 7px;
+    height: 6rem;
+    width: auto;
+}
+
+.nav__menu {
+    display: flex;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+}
+
+.nav__list a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav__hamburger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.nav__hamburger i {
+    color: white;
+    font-size: 2rem;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    margin-top: 10rem;
+}
+
+.footer__container {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+    color: white;
+}
+
+.footer__logo {
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer__logo img {
+    width: 150px;;
+}
+
+.footer__logo h1 {
+    font-size: 1.75rem;
+}
+
+.footer__logo .medsos__container {
+    display: flex;
+    gap: 1.1rem;
+}
+
+.medsos__container img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer__detail {
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.footer__detail h3 {
+    font-size: 1.75rem;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 22px;
+}
+
+.footer__contact h3 {
+    font-size: 1.75rem;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.contact__card {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.contact__card img {
+    width: 32px;
+}
+
+.footer__cp {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 1.25rem;
+}
+
+.footer__cp h3 {
+    font-size: 1.75rem;
+}
+
+.footer__copyright {
+    width: 100%;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 600;
+    padding: .5rem 0;
+    background-color: var(--sixth-color);
+    color: white;
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+    .nav__hamburger {
+        display: flex;
+    }
+    .nav__menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    }
+    .nav__menu.active {
+        display: flex;
+        max-height: 300px; 
+        opacity: 1;
+        transform: translateY(0);
+        margin-top: -3px;
+    }
+    .nav__list {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .nav__list li {
+        width: 100%;
+        text-align: left;
+    }
+    .nav__list a {
+        font-size: 1.2rem;
+    }
+    .footer__container {
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    html {
+        font-size: 12px;
+    }
+    .nav__list a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.3rem;
+    }
+    .footer__container {
+        gap: 4rem;
+    }
+    .medsos__container img {
+        width: 24px;
+        height: 24px;
+    }
+    .footer__detail h3 {
+        font-size: 1.25rem;
+    }
+    .footer__contact {
+        font-size: 1.4rem;
+    }
+    .footer__contact h3 {
+        font-size: 1.25rem;
+    }
+    .footer__cp h3 {
+        font-size: 1.25rem;
+    }   
+}

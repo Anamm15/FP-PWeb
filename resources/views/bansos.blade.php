@@ -8,25 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav__container">
-            <div class="nav__logo">
-                <img src="{{ asset('img/logo.png') }}" alt="">
-            </div>
-            <div class="nav__hamburger" id="hamburgerMenu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="nav__menu" id="navMenu">
-                <ul class="nav__list">
-                    <li> <a href="/">Home</a> </li>
-                    <li> <a href="/bansos">Bantuan Sosial</a> </li>
-                    <li> <a href="">Layanan</a> </li>
-                    <li> <a href="">Berita & Agenda</a> </li>
-                    <li> <a href="">Dana Desa</a> </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    @include('components.navbar')
 
     <main>
         <div class="main__container">
@@ -108,51 +90,7 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer__container">
-            <div class="footer__logo">
-                <img src="{{ asset('img/Group 11.png') }}" alt="">
-                <h1>Media Sosial</h1>
-                <div class="medsos__container">
-                    <a href=""> <img src="{{ asset('icons/facebook.svg') }}" alt=""> </a>
-                    <a href=""> <img src="{{ asset('icons/instagram.svg') }}" alt=""> </a>
-                    <a href=""> <img src="{{ asset('icons/twitter.svg') }}" alt=""> </a>
-                    <a href=""> <img src="{{ asset('icons/tiktok.svg') }}" alt=""> </a>
-                </div>
-            </div>
-            <div class="footer__contact">
-                <h3>Kontak Desa</h3>
-                <div class="contact__container">
-                    <div class="contact__card">
-                        <img src="{{ asset('img/phone-icon.png') }}" alt="">
-                        <h5>081250208644</h5>
-                    </div>
-                    <div class="contact__card">
-                        <img src="{{ asset('img/mail-icon.png') }}" alt="">
-                        <h5>kersik.marangkayu@kurkab.go</h5>
-                    </div>
-                    <div class="contact__card">
-                        <img src="{{ asset('img/clock-icon.png') }}" alt="">
-                        <h5>Senin - Kamis (08.00 - 15.00) & Jum'at (08.00 - 11.00)</h5>
-                    </div>
-                    <div class="contact__card">
-                        <img src="{{ asset('img/home-icon.png') }}" alt="">
-                        <h5>Jalan Langaseng Dusung Empang RT.003</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__cp">
-                <h3>Nomor Telepon Penting</h3>
-                <h4>Jumadi/Kades Kersik</h4>
-                <h4>081242368478</h4>
-                <h4>Yayasan/Ambulan Kersik</h4>
-                <h4>085392095123</h4>
-            </div>
-        </div>
-        <div class="footer__copyright">
-            © 2024 Powered by PT Digital Desa Indonesia
-        </div>
-    </footer>
+    @include('components.footer')
 
     <script src="{{ asset('js/script.js') }}"></script>
 </body>
